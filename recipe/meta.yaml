@@ -1,5 +1,5 @@
 {% set name = "yattag" %}
-{% set version = "1.13.1" %}
+{% set version = "1.13.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2727546210d2bc893727f42250125a1c080e938e046bcf0c45af4c959d61473e
+  sha256: 41c1182f81e69bc53d8763c5bb9d27f54ae05ce581ee4e41c7931cc2f2479262
 
 build:
   number: 0
