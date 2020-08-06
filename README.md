@@ -5,7 +5,7 @@ Home: http://www.yattag.org
 
 Package license: LGPL-2.1
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Generate HTML or XML in a pythonic way. Pure python alternative to web template engines.Can fill HTML forms with default values and error messages.
 
