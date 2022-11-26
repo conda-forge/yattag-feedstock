@@ -1,5 +1,5 @@
 {% set name = "yattag" %}
-{% set version = "1.13.2" %}
+{% set version = "1.14.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 41c1182f81e69bc53d8763c5bb9d27f54ae05ce581ee4e41c7931cc2f2479262
+  sha256: 5731a31cb7452c0c6930dd1a284e0170b39eee959851a2aceb8d6af4134a5fa8
 
 build:
   number: 0
@@ -17,21 +17,28 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.2
   run:
-    - python
+    - python >=3.2
 
 test:
   imports:
     - yattag
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: http://www.yattag.org
-  license: LGPL-2.1
-  license_family: LGPL
-  license_file: LICENSE.txt
+  dev_url: https://github.com/leforestier/yattag
+  license: LGPL-2.1-only
+  license_file:
+    - license/COPYING
+    - license/lgpl-2.1.txt
   summary: Generate HTML or XML in a pythonic way. Pure python alternative to web template engines.Can fill HTML forms with default values and error messages.
 
 extra:
   recipe-maintainers:
     - pmgrafe
+    - thewchan
